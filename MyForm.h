@@ -34,20 +34,28 @@ namespace MorpionGraphique {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::PictureBox^ MorpionGrid;
+
 	protected:
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ TLButton;
 
 	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::Button^ button5;
-	private: System::Windows::Forms::Button^ button6;
-	private: System::Windows::Forms::Button^ button7;
-	private: System::Windows::Forms::Button^ button8;
+	private: System::Windows::Forms::Button^ LMButton;
+
+	private: System::Windows::Forms::Button^ TButton;
+	private: System::Windows::Forms::Button^ MButton;
+	private: System::Windows::Forms::Button^ BMButton;
+
+
+
+	private: System::Windows::Forms::Button^ BLButton;
+
+	private: System::Windows::Forms::Button^ TRButton;
+	private: System::Windows::Forms::Button^ MRButton;
+	private: System::Windows::Forms::Button^ BRButton;
+
+
+
 
 	private:
 		/// <summary>
@@ -62,28 +70,18 @@ namespace MorpionGraphique {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->MorpionGrid = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->TLButton = (gcnew System::Windows::Forms::Button());
 			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->button5 = (gcnew System::Windows::Forms::Button());
-			this->button6 = (gcnew System::Windows::Forms::Button());
-			this->button7 = (gcnew System::Windows::Forms::Button());
-			this->button8 = (gcnew System::Windows::Forms::Button());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MorpionGrid))->BeginInit();
+			this->LMButton = (gcnew System::Windows::Forms::Button());
+			this->TButton = (gcnew System::Windows::Forms::Button());
+			this->MButton = (gcnew System::Windows::Forms::Button());
+			this->BMButton = (gcnew System::Windows::Forms::Button());
+			this->BLButton = (gcnew System::Windows::Forms::Button());
+			this->TRButton = (gcnew System::Windows::Forms::Button());
+			this->MRButton = (gcnew System::Windows::Forms::Button());
+			this->BRButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
-			// 
-			// MorpionGrid
-			// 
-			this->MorpionGrid->Location = System::Drawing::Point(46, 29);
-			this->MorpionGrid->Name = L"MorpionGrid";
-			this->MorpionGrid->Size = System::Drawing::Size(390, 390);
-			this->MorpionGrid->TabIndex = 0;
-			this->MorpionGrid->TabStop = false;
 			// 
 			// label1
 			// 
@@ -116,98 +114,96 @@ namespace MorpionGraphique {
 			this->label2->TabIndex = 3;
 			this->label2->Text = L"Ordinateur";
 			// 
-			// button1
+			// LMButton
 			// 
-			this->button1->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button1->Location = System::Drawing::Point(46, 165);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(130, 130);
-			this->button1->TabIndex = 4;
-			this->button1->UseVisualStyleBackColor = false;
+			this->LMButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->LMButton->Location = System::Drawing::Point(46, 165);
+			this->LMButton->Name = L"LMButton";
+			this->LMButton->Size = System::Drawing::Size(130, 130);
+			this->LMButton->TabIndex = 4;
+			this->LMButton->UseVisualStyleBackColor = false;
 			// 
-			// button2
+			// TButton
 			// 
-			this->button2->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button2->Location = System::Drawing::Point(182, 29);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(130, 130);
-			this->button2->TabIndex = 4;
-			this->button2->UseVisualStyleBackColor = false;
+			this->TButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->TButton->Location = System::Drawing::Point(182, 29);
+			this->TButton->Name = L"TButton";
+			this->TButton->Size = System::Drawing::Size(130, 130);
+			this->TButton->TabIndex = 4;
+			this->TButton->UseVisualStyleBackColor = false;
 			// 
-			// button3
+			// MButton
 			// 
-			this->button3->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button3->Location = System::Drawing::Point(182, 165);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(130, 130);
-			this->button3->TabIndex = 5;
-			this->button3->UseVisualStyleBackColor = false;
+			this->MButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->MButton->Location = System::Drawing::Point(182, 165);
+			this->MButton->Name = L"MButton";
+			this->MButton->Size = System::Drawing::Size(130, 130);
+			this->MButton->TabIndex = 5;
+			this->MButton->UseVisualStyleBackColor = false;
 			// 
-			// button4
+			// BMButton
 			// 
-			this->button4->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button4->Location = System::Drawing::Point(182, 301);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(130, 130);
-			this->button4->TabIndex = 6;
-			this->button4->UseVisualStyleBackColor = false;
+			this->BMButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->BMButton->Location = System::Drawing::Point(182, 301);
+			this->BMButton->Name = L"BMButton";
+			this->BMButton->Size = System::Drawing::Size(130, 130);
+			this->BMButton->TabIndex = 6;
+			this->BMButton->UseVisualStyleBackColor = false;
 			// 
-			// button5
+			// BLButton
 			// 
-			this->button5->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button5->Location = System::Drawing::Point(46, 301);
-			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(130, 130);
-			this->button5->TabIndex = 7;
-			this->button5->UseVisualStyleBackColor = false;
+			this->BLButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->BLButton->Location = System::Drawing::Point(46, 301);
+			this->BLButton->Name = L"BLButton";
+			this->BLButton->Size = System::Drawing::Size(130, 130);
+			this->BLButton->TabIndex = 7;
+			this->BLButton->UseVisualStyleBackColor = false;
 			// 
-			// button6
+			// TRButton
 			// 
-			this->button6->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button6->Location = System::Drawing::Point(318, 29);
-			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(130, 130);
-			this->button6->TabIndex = 8;
-			this->button6->UseVisualStyleBackColor = false;
+			this->TRButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->TRButton->Location = System::Drawing::Point(318, 29);
+			this->TRButton->Name = L"TRButton";
+			this->TRButton->Size = System::Drawing::Size(130, 130);
+			this->TRButton->TabIndex = 8;
+			this->TRButton->UseVisualStyleBackColor = false;
 			// 
-			// button7
+			// MRButton
 			// 
-			this->button7->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button7->Location = System::Drawing::Point(318, 165);
-			this->button7->Name = L"button7";
-			this->button7->Size = System::Drawing::Size(130, 130);
-			this->button7->TabIndex = 9;
-			this->button7->UseVisualStyleBackColor = false;
+			this->MRButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->MRButton->Location = System::Drawing::Point(318, 165);
+			this->MRButton->Name = L"MRButton";
+			this->MRButton->Size = System::Drawing::Size(130, 130);
+			this->MRButton->TabIndex = 9;
+			this->MRButton->UseVisualStyleBackColor = false;
 			// 
-			// button8
+			// BRButton
 			// 
-			this->button8->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->button8->Location = System::Drawing::Point(318, 301);
-			this->button8->Name = L"button8";
-			this->button8->Size = System::Drawing::Size(130, 130);
-			this->button8->TabIndex = 10;
-			this->button8->UseVisualStyleBackColor = false;
+			this->BRButton->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->BRButton->Location = System::Drawing::Point(318, 301);
+			this->BRButton->Name = L"BRButton";
+			this->BRButton->Size = System::Drawing::Size(130, 130);
+			this->BRButton->TabIndex = 10;
+			this->BRButton->UseVisualStyleBackColor = false;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(734, 461);
-			this->Controls->Add(this->button8);
-			this->Controls->Add(this->button7);
-			this->Controls->Add(this->button6);
-			this->Controls->Add(this->button5);
-			this->Controls->Add(this->button4);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->BRButton);
+			this->Controls->Add(this->MRButton);
+			this->Controls->Add(this->TRButton);
+			this->Controls->Add(this->BLButton);
+			this->Controls->Add(this->BMButton);
+			this->Controls->Add(this->MButton);
+			this->Controls->Add(this->TButton);
+			this->Controls->Add(this->LMButton);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->TLButton);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->MorpionGrid);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MorpionGrid))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
