@@ -1,0 +1,14 @@
+Some removed lines that could still help later.
+
+//std::string to System::String
+std::string s = "s";
+String^ MyString = gcnew String(s.c_str());
+MessageBox::Show(MyString);
+
+//int[] to string
+	std::string s = "";
+	for (int i = 0; i < 8; i++)
+	{
+		s += std::to_string(grid[i]);
+	}
+	return s;
